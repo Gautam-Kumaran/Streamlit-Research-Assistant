@@ -170,7 +170,7 @@ agent({"input": "What is the average forecast accuracy in the tyre industry"})
 
 
 # 4. Use streamlit to create a web app
-'''def main():
+def main():
      st.set_page_config(page_title="AI research agent", page_icon=":bird:")
 
      st.header("AI research agent :bird:")
@@ -184,9 +184,9 @@ agent({"input": "What is the average forecast accuracy in the tyre industry"})
          st.info(result['output'])
 
 if __name__ == '__main__':
-     main()'''
-'''
+     main()
 
+'''
 # 5. Set this as an API endpoint via FastAPI
 app = FastAPI()
 
