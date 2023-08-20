@@ -17,6 +17,7 @@ import requests
 import json
 from langchain.schema import SystemMessage
 from fastapi import FastAPI
+import streamlit as st
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
