@@ -176,7 +176,7 @@ def main():
 #     if email == "gautamkumaran00@gmail.com":
 # '''
     st.header("AI research agent :bird:")
-    email = st.text_input("Please write your email address")
+    # email = st.text_input("Please write your email address")
 
     query = st.text_input("Research goal")
 
