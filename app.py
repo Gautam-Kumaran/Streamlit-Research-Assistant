@@ -176,17 +176,16 @@ def main():
 #     if email == "gautamkumaran00@gmail.com":
 # '''
     st.header("AI research agent :bird:")
-    # email = st.text_input("Please write your email address")
+# email = st.text_input("Please write your email address")
 
     query = st.text_input("Research goal")
 
     if query:
         st.write("Doing research for ", query)
 
-        result = agent({"input": query})
-
+        # result = agent({"input": query})
+        result = "2"
         st.info(result['output'])
 
 if __name__ == '__main__':
      main()
-
