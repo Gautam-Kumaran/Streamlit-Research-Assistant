@@ -185,7 +185,7 @@ def main():
 
         # result = agent({"input": query})
         # result = "2"
-        st.info('2')
+        st.info("2")
 
 if __name__ == '__main__':
      main()
