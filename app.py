@@ -175,7 +175,7 @@ def main():
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
     email = st.text_input("Please write your email address")
 
-    if email == "gautamkumaran00@gmail.com":
+    if email == "smithakumaran@hotmail.com":
 
         st.header("AI research agent :bird:")
 # email = st.text_input("Please write your email address")
