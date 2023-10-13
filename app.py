@@ -171,21 +171,21 @@ agent = initialize_agent(
 # 4. Use streamlit to create a web app
 def main():
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
-# '''    email = st.text_input("Please write your email address")
+    email = st.text_input("Please write your email address")
 
-#     if email == "gautamkumaran00@gmail.com":
-# '''
-    st.header("AI research agent :bird:")
+    if email == "gautamkumaran00@gmail.com":
+
+        st.header("AI research agent :bird:")
 # email = st.text_input("Please write your email address")
 
-    query = st.text_input("Research goal")
+        query = st.text_input("Research goal")
 
-    if query:
-        st.write("Doing research for ", query)
+        if query:
+            st.write("Doing research for ", query)
 
-        # result = agent({"input": query})
-        # result = "2"
-        st.info("2")
+            # result = agent({"input": query})
+            # result = "2"
+            st.info("2")
 
 if __name__ == '__main__':
      main()
