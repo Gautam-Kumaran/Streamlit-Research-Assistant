@@ -187,11 +187,13 @@ def main():
 
             result = agent({"input": query})
             st.info(result["output"])
+
             data = {'content': result["output"],
                     'subject': query,
                     'email'  : email
             }
             research = requests.post(Url, json = data)
+            st.info("Webhook sent")
 
 if __name__ == '__main__':
      main()
