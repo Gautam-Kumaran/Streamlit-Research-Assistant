@@ -183,9 +183,8 @@ def main():
         if query:
             st.write("Doing research for ", query)
 
-            # result = agent({"input": query})
-            # result = "2"
-            st.info("2")
+            result = agent({"input": query})
+            st.info(result["output"])
 
 if __name__ == '__main__':
      main()
