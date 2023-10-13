@@ -169,7 +169,9 @@ agent = initialize_agent(
 
 
 # 4. Use streamlit to create a web app
+
 def main():
+    Url = "https://hook.eu2.make.com/c64toa8661enfoi66slqu5xsq0djtk6a"
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
     email = st.text_input("Please write your email address")
 
@@ -185,6 +187,12 @@ def main():
 
             result = agent({"input": query})
             st.info(result["output"])
+            data = {'content': result["output"],
+                    'subject': query,
+                    'email'  : email
+            }
+            research = requests.post(Url, json = data)
 
 if __name__ == '__main__':
      main()
+
