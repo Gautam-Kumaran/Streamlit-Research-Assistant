@@ -184,8 +184,8 @@ def main():
         st.write("Doing research for ", query)
 
         # result = agent({"input": query})
-        result = "2"
-        st.info(result)
+        # result = "2"
+        st.info('2')
 
 if __name__ == '__main__':
      main()
