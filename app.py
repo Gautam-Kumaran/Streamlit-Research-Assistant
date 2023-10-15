@@ -168,14 +168,36 @@ agent = initialize_agent(
 )
 
 
+# Initialize an empty list to store emails
+email_list = ["smithakumaran@hotmail.com","kumaran@tinymagiq.com"]
+
+# Function to add an email to the list
+def add_email(email):
+    email_list.append(email)
+    print(f"Email {email} added successfully!")
+
+# Function to check if an email is in the list
+def check_email(email):
+    return email in email_list
+
+# Example usage
+# add_email("example@email.com")
+# add_email("another@example.com")
+
+
+
+
 # 4. Use streamlit to create a web app
 
 def main():
     Url = "https://hook.eu2.make.com/c64toa8661enfoi66slqu5xsq0djtk6a"
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
     email = st.text_input("Please write your email address")
+    
+    # input_email = input("Enter an email to check: ")
+    # check_email(email)
 
-    if email == "smithakumaran@hotmail.com":
+    if check_email(email)
 
         st.header("AI research agent :bird:")
 # email = st.text_input("Please write your email address")
