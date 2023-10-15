@@ -197,7 +197,7 @@ def main():
     # input_email = input("Enter an email to check: ")
     # check_email(email)
 
-    if check_email(email)
+    if check_email(email):
 
         st.header("AI research agent :bird:")
 # email = st.text_input("Please write your email address")
