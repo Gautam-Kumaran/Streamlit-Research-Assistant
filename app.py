@@ -193,7 +193,7 @@ def main():
                     'email'  : email
             }
             research = requests.post(Url, json = data)
-            st.info("Webhook sent")
+            st.info("Email with results to " + email)
 
 if __name__ == '__main__':
      main()
