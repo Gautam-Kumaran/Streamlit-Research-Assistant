@@ -181,7 +181,7 @@ def check_email(email):
     return email in email_list
 
 def send_to_discord(webhook_url, message):
-    payload = {'content': message}
+    payload = {'content': message}  
     response = requests.post(webhook_url, json=payload)
     return response.status_code
 
@@ -210,7 +210,7 @@ def main():
 
         research_button = st.button("Submit")
 
-        if research_button and query:
+        if research_button:
             st.write("Doing research for ", query)
 
             result = agent({"input": query})
