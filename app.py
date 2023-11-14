@@ -208,7 +208,7 @@ def main():
 
         query = st.text_input("Research goal")
 
-        research_button = st.button("Enter")
+        research_button = st.button("Submit")
 
         if research_button and query:
             st.write("Doing research for ", query)
