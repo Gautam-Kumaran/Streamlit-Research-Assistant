@@ -196,15 +196,18 @@ def main():
     
     # input_email = input("Enter an email to check: ")
     # check_email(email)
+    email_button = st.button("Enter")
+    if email_button and check_email(email):
 
-    if check_email(email):
 
         st.header("AI research agent :bird:")
 # email = st.text_input("Please write your email address")
 
         query = st.text_input("Research goal")
 
-        if query:
+        research_button = st.button("Enter")
+
+        if research_button and query:
             st.write("Doing research for ", query)
 
             result = agent({"input": query})
