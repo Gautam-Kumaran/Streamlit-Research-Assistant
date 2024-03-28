@@ -195,36 +195,37 @@ def send_to_discord(webhook_url, message):
 def main():
     Url = "https://hook.eu2.make.com/c64toa8661enfoi66slqu5xsq0djtk6a"
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
-    # email = st.text_input("Please write your email address")
+    email = st.text_input("Please write your email address")
     
-    # # input_email = input("Enter an email to check: ")
-    # # check_email(email)
-    # email_button = st.button("Enter")
+    # input_email = input("Enter an email to check: ")
+    # check_email(email)
+    email_button = st.button("Enter")
+    if email_button:
 
 
-    st.header("AI research agent :bird:")
+        st.header("AI research agent :bird:")
 # email = st.text_input("Please write your email address")
 
-    query = st.text_input("Research goal")
+        query = st.text_input("Research goal")
 
-    research_button = st.button("submit")
+        research_button = st.button("submit")
 
-    if research_button:
-        st.write("Doing research for ", query)
+        if research_button:
+            st.write("Doing research for ", query)
 
-        result = agent({"input": query})
-        st.info(result["output"])
+            result = agent({"input": query})
+            st.info(result["output"])
 
-        data = {'content': result["output"],
-                'subject': query,
-                'email'  : email
-        }
-        research = requests.post(Url, json = data)
-        st.info("Email with results to " + email)
+            data = {'content': result["output"],
+                    'subject': query,
+                    'email'  : email
+            }
+            research = requests.post(Url, json = data)
+            st.info("Email with results to " + email)
 
-        discord_webhook_url = "https://discord.com/api/webhooks/1173957379365289994/26afY6Ly-21Vk_JkTdJw8f5BLllyG98DNVT9RcngZiq6H6dMNADzY9q23N6qlez1d7el"
-        discord_status_code = send_to_discord(discord_webhook_url, result["output"])
-        st.info(f"Result sent to Discord. Status Code: {discord_status_code}")
+            discord_webhook_url = "https://discord.com/api/webhooks/1173957379365289994/26afY6Ly-21Vk_JkTdJw8f5BLllyG98DNVT9RcngZiq6H6dMNADzY9q23N6qlez1d7el"
+            discord_status_code = send_to_discord(discord_webhook_url, result["output"])
+            st.info(f"Result sent to Discord. Status Code: {discord_status_code}")
 
 if __name__ == '__main__':
      main()
