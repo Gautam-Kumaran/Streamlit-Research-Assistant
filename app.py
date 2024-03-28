@@ -195,11 +195,11 @@ def send_to_discord(webhook_url, message):
 def main():
     Url = "https://hook.eu2.make.com/c64toa8661enfoi66slqu5xsq0djtk6a"
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
-    email = st.text_input("Please write your email address")
+    # email = st.text_input("Please write your email address")
     
-    # input_email = input("Enter an email to check: ")
-    # check_email(email)
-    email_button = st.button("Enter")
+    # # input_email = input("Enter an email to check: ")
+    # # check_email(email)
+    # email_button = st.button("Enter")
     if email_button:
 
 
