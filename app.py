@@ -200,7 +200,7 @@ def main():
     # input_email = input("Enter an email to check: ")
     # check_email(email)
     email_button = st.button("Enter")
-    if email_button and check_email(email):
+    if email_button:
 
 
         st.header("AI research agent :bird:")
