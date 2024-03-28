@@ -210,22 +210,22 @@ def main():
 
         research_button = st.button("submit")
 
-        if research_button:
-            st.write("Doing research for ", query)
 
-            result = agent({"input": query})
-            st.info(result["output"])
+        st.write("Doing research for ", query)
 
-            data = {'content': result["output"],
-                    'subject': query,
-                    'email'  : email
-            }
-            research = requests.post(Url, json = data)
-            st.info("Email with results to " + email)
+        result = agent({"input": query})
+        st.info(result["output"])
 
-            discord_webhook_url = "https://discord.com/api/webhooks/1173957379365289994/26afY6Ly-21Vk_JkTdJw8f5BLllyG98DNVT9RcngZiq6H6dMNADzY9q23N6qlez1d7el"
-            discord_status_code = send_to_discord(discord_webhook_url, result["output"])
-            st.info(f"Result sent to Discord. Status Code: {discord_status_code}")
+        data = {'content': result["output"],
+                'subject': query,
+                'email'  : email
+        }
+        research = requests.post(Url, json = data)
+        st.info("Email with results to " + email)
+
+        discord_webhook_url = "https://discord.com/api/webhooks/1173957379365289994/26afY6Ly-21Vk_JkTdJw8f5BLllyG98DNVT9RcngZiq6H6dMNADzY9q23N6qlez1d7el"
+        discord_status_code = send_to_discord(discord_webhook_url, result["output"])
+        st.info(f"Result sent to Discord. Status Code: {discord_status_code}")
 
 if __name__ == '__main__':
      main()
