@@ -18,6 +18,9 @@ import json
 from langchain.schema import SystemMessage
 from fastapi import FastAPI
 import streamlit as st
+import requests
+import streamlit as st
+from typing import Dict
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -197,14 +200,9 @@ def main():
     st.set_page_config(page_title="AI research agent", page_icon=":mag:")
     email = st.text_input("Please write your email address to get the results")
     
-    # input_email = input("Enter an email to check: ")
-    # check_email(email)
     email_button = st.button("Enter")
     if email_button:
-
-
         st.header("AI research agent :mag:")
-# email = st.text_input("Please write your email address")
 
         query = st.text_input("Research goal")
 
