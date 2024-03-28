@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-from langchain_community import PromptTemplate
+from langchain_community.prompts import PromptTemplate
 from langchain_community.agents import initialize_agent, Tool
 from langchain_community.agents import AgentType
 from langchain_community.chat_models import ChatOpenAI
