@@ -20,18 +20,6 @@ The app can be used for:
 - Organising notes
 - Generating structured responses
 
-## Running the App
-
-```bash
-streamlit run app.py
-```
-
-The app will open in a browser, usually at:
-
-```text
-http://localhost:8501
-```
-
 ## Notes
 
 If the app uses an API key, it should be stored in Streamlit secrets or an environment variable and not written directly into the code.
